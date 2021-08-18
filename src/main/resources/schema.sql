@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS employee (
 
 
 CREATE TABLE  users  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    username  varchar(255) NOT NULL,
    password  varchar(255) NOT NULL,
    msg  text NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE  users  (
 );
 
 CREATE TABLE  post  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    contents  text NOT NULL,
    post_img  varchar(255) NOT NULL,
    user_id  int(11) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE  post  (
 
 
 CREATE TABLE  comment  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    post_id  int(11) NOT NULL,
    user_id  int(11) NOT NULL,
    comment  text NOT NULL,
@@ -38,13 +38,13 @@ CREATE TABLE  comment  (
 
 
 CREATE TABLE  category  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    category_name  varchar(255) NOT NULL
 );
 
 
 CREATE TABLE  good  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    post_id  int(11) NOT NULL,
    user_id  int(11) NOT NULL,
    delete_flg  tinyint(1) NOT NULL DEFAULT '0',
@@ -52,7 +52,7 @@ CREATE TABLE  good  (
 );
 
 CREATE TABLE  favarite  (
-   id  int(11) NOT NULL,
+   id  int(11) NOT NULL AUTO_INCREMENT,
    post_id  int(11) NOT NULL,
    user_id  int(11) NOT NULL,
    delete_flg  tinyint(1) NOT NULL DEFAULT '0',

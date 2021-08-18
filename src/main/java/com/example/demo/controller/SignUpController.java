@@ -62,7 +62,10 @@ public class SignUpController {
         		//session.setAttribute("userId",userData.getId());
         		//session.setAttribute("username", userData.getUsername());
         		
-        		return "redirect:/benri";
+        		
+        		return "redirect:/login";
+        		//return "redirect:/benri";
+        		//return "benri/postlist";
         	}
         	model.addAttribute("signUpForm", signUpForm);
         	model.addAttribute("title", "ユーザ登録済み");

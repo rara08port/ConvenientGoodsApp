@@ -19,7 +19,7 @@ public class BenriController {
     @GetMapping
     public String benri(Model model) {
     	
-        model.addAttribute("title", "ログイン");
+        model.addAttribute("title", "便利");
        
         return "benri/postlist";
     }

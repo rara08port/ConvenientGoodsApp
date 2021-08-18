@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<th:block th:fragment="header-login">
+<!-- Header -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+  <a th:href="@{/top}" class="brand-logo navbar-brand"><span class="brand-title">便利グッズ</span>
+    <i class="fas fa-piggy-bank fa-lg right"></i>
+    <i class="material-icons left">category</i>
+    <i class="material-icons left">smart_toy</i>
+  </a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a th:href="@{/benri}" class="nav-link">
+          <span class="header-menu"><i class="material-icons left">format_list_bulleted</i>一覧</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a th:href="@{/user/mypage}" class="nav-link">
+          <span class="header-menu"><i class="material-icons left">home</i>マイページ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a th:href="@{/logout}" class="nav-link">
+          <span class="header-menu"><i class="material-icons left">logout</i>ログアウト</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+	
+	</th:block>
+</body>
+</html>

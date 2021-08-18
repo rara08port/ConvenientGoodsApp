@@ -47,7 +47,7 @@ public class LoginController {
      */
     @PostMapping("/login")
     public String login(@Valid @ModelAttribute LoginForm loginForm,BindingResult result, Model model) {
-    	
+    	System.out.println("Login login");
     	User user = new User();
     	user.setUsername(loginForm.getUsername());
     	user.setPassword(loginForm.getPassword());
@@ -64,6 +64,7 @@ public class LoginController {
         		//session.setAttribute("username", userData.getUsername());
         		
         		return "redirect:/benri";
+    			//return "user/login";
         	}
     		
         	model.addAttribute("loginForm", loginForm);

@@ -22,7 +22,7 @@ CREATE TABLE  post  (
    post_img  varchar(255) NOT NULL,
    user_id  int(11) NOT NULL,
   category_id int(11) NOT NULL,
-   delete_flg  tinyint(1) NOT NULL DEFAULT '0',
+   delete_flg  int(11) NOT NULL DEFAULT '0',
    created_date  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -26,6 +26,10 @@
 							<h5>カテゴリ</h5>
 						</div>
 						<div class="row"></div>
+						<ul>
+						<li><a th:href="@{/top}"><span>aaa</span></a></li>
+						<li><a th:href="@{/top}"><span>bbb</span></a></li>
+						</ul>
 						
 					</div>
 				</div>
@@ -36,6 +40,28 @@
 					<span><h5>投稿はありません</h5></span>
 				</div>
 				
+				<table style="border-collapse:collapse;margin-left:0px;">
+
+
+<table>
+  <tr>
+    <td>タイプ</td>
+    <td>タスク</td>
+    <td>画像</td>
+    <td>名前</td>
+    <td>カテゴリ</td>
+    <td>カ日付</td>
+   
+  </tr>
+  <tr th:each="list : ${postList}">
+    <td th:text=${list.id}></td>
+    <td th:text=${list.contents}></td>
+    <td th:text=${list.post_img}></td>
+    <td th:text=${list.user.username}></td>
+    <td th:text=${list.category.categoryname}></td>
+    <td th:text=${list.created_date}></td>
+  </tr>
+</table>			
 
 	
 			</div>

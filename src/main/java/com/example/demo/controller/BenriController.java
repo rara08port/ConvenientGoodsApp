@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.entity.Post;
@@ -39,5 +41,15 @@ public class BenriController {
        
         return "benri/postlist";
     }
+    
+    @GetMapping("category/{category}")
+	public String showPostByCategory(@PathVariable("category") int category, 
+			 Model model) {
+		
+    	List<Post> postList = postService.findByCategory(category);
+    	model.addAttribute("postList",postList);
+	
+    	return "benri/postlist";
+	}
 
 }

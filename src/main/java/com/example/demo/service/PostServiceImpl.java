@@ -48,7 +48,7 @@ private final PostDao dao;
 	@Override
 	public List<Post> findByCategory(int categoryId) {
 		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		return dao.findByCategory(categoryId);
 	}
 
 	@Override
